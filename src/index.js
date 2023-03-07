@@ -13,12 +13,9 @@ app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-
 // Routes
 
-app.get('/', (req, res) => {
-    res.json({'title': 'Hello Nodejs & Express!'})
-})
+app.use(require('./routes/index.js'));
 
 // Starting the server
 
