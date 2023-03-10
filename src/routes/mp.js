@@ -9,7 +9,13 @@ const PaymentInstance = new PaymentController(new PaymentServices())
 
 // routes
 
-router.get('/payment', function (req, res, next) {
+router.get('/15', function (req, res, next) {
+    PaymentInstance.getPaymentLink(req, res);
+})
+router.get('/30', function (req, res, next) {
+    PaymentInstance.getPaymentLink(req, res);
+})
+router.get('/60', function (req, res, next) {
     PaymentInstance.getPaymentLink(req, res);
 })
 
